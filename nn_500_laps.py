@@ -520,7 +520,7 @@ def main():
     map_obj = Map(0.4)   # same as your code
     vt = 0.8             # target velocity
 
-    laps_target = 200    # benchmark up to 100 LMPC iterations
+    laps_target = 500    # benchmark up to 100 LMPC iterations
 
     print("\n=== BASELINE (your original flow) ===")
     metrics_baseline = run_baseline_pipeline(map_obj, xS, vt, n, d, N, dt=dt, laps_target=laps_target)
@@ -530,7 +530,7 @@ def main():
 
     print_summary(metrics_baseline, metrics_nn)
     plot_benchmark(metrics_baseline, metrics_nn,
-                   title_suffix="Baseline vs Robust NN-Residual — 100 Laps")
+                   title_suffix="Baseline vs Robust NN-Residual — 500 Laps")
 
 if __name__ == "__main__":
     main()
